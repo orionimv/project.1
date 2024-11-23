@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Store</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        }
+        header {
+            min-height: 600px;
+            background-image: url('apple_desctop.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        header h1 {
+            color: white;
+            padding-top: 200px;
+            font-size: 50px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+            color: white;
+            margin: 0 30px 0 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            background-color: rgb(0,0,0);
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        nav ul li:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .container {
+            width: 1200px;
+            min-height: 700px;
+            /*background-color: rgb(170, 220, 200);*/
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .card {
+            width: 250px;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 250px;
+        }
+
+        .card-info {
+            padding: 0 15px;
+        }
+
+        .card-characteristic {
+            width: 250px;
+            height: 230px;
+            position: absolute;
+
+        }
+        .card-characteristic p {
+            display: none;
+            position: absolute;
+
+        }
+        .card-characteristic p b {
+            position: relative;
+            left: 50px;
+        }
+
+        .card-characteristic p:nth-child(2) {
+            position: relative;
+            left: 20px;
+            top: 50px;
+        }
+
+        .card-characteristic p:nth-child(3) {
+            position: relative;
+            left: 20px;
+            top: 50px;
+        }
+        .card-characteristic p:nth-child(4) {
+            position: relative;
+            left: 20px;
+            top: 50px;
+        }
+        .card-characteristic p:nth-child(5) {
+            position: relative;
+            left: 20px;
+            top: 50px;
+        }
+
+        .card-characteristic:hover p {
+            display: block;
+
+        }
+
+        .card-characteristic:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .card-characteristic p:first-child {
+            font-size: 20px;
+
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu li {
+            list-style: none;
+            border: 1px solid black;
+            font-size: 25px;
+        }
+
+        .menu li a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        .submenu {
+            position: relative;
+        }
+
+        .submenu ul {
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+
+        .submenu ul li {
+            width: 120px;
+        }
+
+        .submenu ul li a {
+            font-size: 20px;
+            padding: 15px 10px;
+        }
+
+        .submenu:hover > a {
+            color: black;
+        }
+
+        .submenu:hover ul {
+            display: block;
+        }
+
+        .submenu ul li:hover {
+            background-color: coral;
+        }
+
+        /*a {*/
+        /*    text-align: center;*/
+        /*}*/
+
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="menu">
+            <li><a href="Apple%20store.html">Главная</a></li>
+            <li class="submenu">
+                <a href="#">Продукты</a>
+                <ul>
+                    <li><a href="iPhone.html">iPhone</a></li>
+                    <li><a href="iPad.html">iPad</a></li>
+                    <li><a href="Macbook.html">MacBook</a></li>
+                    <li><a href="Apple%20Watch.html">Apple Watch</a></li>
+                    <li><a href="Airpods.html">Airpods</a></li>
+                    <li><a href="Apple__TV.html">Apple TV</a></li>
+                    <li><a href="iMac.html">Apple iMac</a></li>
+                    <li><a href="Mac%20mini.html">Mac Mini</a></li>
+                </ul>
+            </li>
+            <li><a href="index2.html">О нас</a></li>
+            <li><a href="suprise.html">ВЫЙГРАЙ IPHONE </a></li>
+            <li><a href="todo.html">Заказать товар</a></li>
+
+        </ul>
+    </nav>
+    <h1>Welcome to Apple Store</h1>
+</header>
+<div class="loading-page">
+    <div class="spinner-loading"></div>
+</div>
+<div class="container">
+
+    <div class="card">
+
+        <img src="iphone%20fon.jpg"/>
+        <div class="card-info">
+            <p>
+                <a href="iPhone.html"><strong>iPhone</strong></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+
+        <img src="ipad.jpg"/>
+        <div class="card-info">
+            <p>
+             <a href="iPad.html"><strong>iPad</strong></a>
+            </p>
+
+        </div>
+    </div>
+    <div class="card">
+    <img src="macboook%20fon.jpg"/>
+    <div class="card-info">
+        <p>
+         <a href="Macbook.html">
+             <strong>Macbook</strong>
+         </a>
+        </p>
+    </div>
+</div>
+
+    <div class="card">
+    <img src="apple%20watch.jpg"/>
+    <div class="card-info">
+        <p>
+           <a href="Apple%20Watch.html"><strong>Apple Watch</strong></a>
+        </p>
+    </div>
+</div>
+
+    <div class="card">
+    <img src="airpods%20fon.jpg"/>
+    <div class="card-info">
+        <p>
+            <a href="Airpods.html"><strong>Airpods</strong></a>
+        </p>
+    </div>
+</div>
+
+    <div class="card">
+    <img src="apple%20tv%20fon.jpg"/>
+    <div class="card-info">
+        <p>
+            <a href="Apple__TV.html"><strong>Apple TV</strong></a>
+        </p>
+    </div>
+</div>
+
+    <div class="card">
+    <img src="imac%20fon.jpg"/>
+    <div class="card-info">
+        <p>
+            <a href="iMac.html"><strong>Apple iMac</strong></a>
+        </p>
+    </div>
+</div>
+    <div class="card">
+    <img src="mac%20mini.jpg"/>
+    <div class="card-info">
+        <p>
+            <a href="Mac%20mini.html"><strong>Mac mini</strong></a>
+        </p>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .todo-list {
+            list-style: none;
+        }
+
+        .low {
+            background-color: #29d261;
+        }
+
+        .medium {
+            background-color: yellow;
+        }
+
+        .high {
+            background-color: rgba(255, 0 ,0, 0.8);
+        }
+            .super {
+                background-color: darkblue;
+            }
+
+    </style>
+</head>
+<header>
+<nav>
+    <ul class="menu">
+        <li><a href="Apple%20store.html">Главная</a></li>
+        <li class="submenu">
+            <a href="#">Продукты</a>
+            <ul>
+                <li><a href="iPhone.html">iPhone</a></li>
+                <li><a href="iPad.html">iPad</a></li>
+                <li><a href="Macbook.html">MacBook</a></li>
+                <li><a href="Apple%20Watch.html">Apple Watch</a></li>
+                <li><a href="Airpods.html">Airpods</a></li>
+                <li><a href="Apple__TV.html">Apple TV</a></li>
+                <li><a href="iMac.html">Apple iMac</a></li>
+                <li><a href="Mac%20mini.html">Mac Mini</a></li>
+            </ul>
+        </li>            <li><a href="index2.html">О нас</a></li>
+    </ul>
+</nav>
+<h1>Заказ</h1>
+</header>
+
+<body>
+    <form id="form">
+        <label for="title">Модель</label><br>
+        <input type="text" id="title" name="title"><br>
+
+        <label for="description">ФИО,Адрес достаки</label><br>
+        <textarea id="description"></textarea><br>
+
+        <label for="date">Дата доставки</label><br>
+        <input type="date" id="date" name="date"><br>
+
+        <label for="priority">Город</label><br>
+        <select id="priority">
+            <option value="low">Одесса</option>
+            <option value="medium">Киев</option>
+            <option value="high">Днепр</option>
+            <option value="super">Харьков</option>
+        </select>
+
+        <br><br>
+        <button>Заказать</button>
+    </form>
+
+    <ul class="todo-list">
+
+    </ul>
+
+    <script>
+        var $form = document.getElementById('form');
+
+        var $title = document.getElementById('title');
+        var $desc = document.getElementById('description');
+        var $date = document.getElementById('date');
+        var $priority = document.getElementById('priority');
+        var $title = document.getElementById('title');
+
+        var $todoList = document.querySelector('.todo-list');
+
+        $todoList.innerHTML = localStorage.getItem('todo-list')
+
+        $form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var $h3 = document.createElement('h3');
+            $h3.textContent = $title.value;
+
+            var $pDescr = document.createElement('p');
+            $pDescr.textContent = $desc.value;
+
+            var $pDate = document.createElement('p');
+            $pDate.textContent = $date.value;
+
+            var $li = document.createElement('li');
+
+            $li.append($h3);
+            $li.append($pDescr);
+            $li.append($pDate);
+
+            $li.classList.add($priority.value)
+
+            $todoList.append($li);
+
+            console.log($li)
+
+            localStorage.setItem('todo-list', $todoList.innerHTML);
+        })
+
+    </script>
+</body>
+</html>
